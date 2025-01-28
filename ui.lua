@@ -24,7 +24,7 @@ local X = Instance.new("TextButton")
 X.Name = "X"
 X.BackgroundTransparency = 1
 X.Font = 9
-X.TextColor3 = Color3.fromHex("87a5ff")
+X.TextColor3 = Color3.fromHex("AFA1FD")
 X.Size = UDim2.new(0, 30, 0, 30)
 X.Text = "X"
 X.TextScaled = true
@@ -38,7 +38,7 @@ local TitleUI = Instance.new("TextLabel")
 TitleUI.Name = "TitleUI"
 TitleUI.Size = UDim2.new(0, 400, 0, 30)
 TitleUI.Text = Title
-TitleUI.TextColor3 = Color3.fromHex("87a5ff")
+TitleUI.TextColor3 = Color3.fromHex("AFA1FD")
 TitleUI.Font = 9
 TitleUI.Position = UDim2.new(0, 10, 0, 10)
 TitleUI.TextScaled = true
@@ -51,7 +51,7 @@ ToggleUI.Name = "ToggleUI"
 ToggleUI.Font = 9
 ToggleUI.Size = UDim2.new(0, 32, 0, 32)
 ToggleUI.TextScaled = true
-ToggleUI.TextColor3 = Color3.fromHex("87a5ff")
+ToggleUI.TextColor3 = Color3.fromHex("AFA1FD")
 ToggleUI.Position = UDim2.new(1, -224, 0, 4)
 ToggleUI.Text = "P"
 ToggleUI.BackgroundTransparency = 0.4
@@ -96,7 +96,7 @@ local OpenTab = Instance.new("TextButton")
 OpenTab.BorderSizePixel = 0
 OpenTab.Name = "OpenTab"
 OpenTab.TextColor3 = Color3.fromHex("7A7A84")
-if Visible then OpenTab.TextColor3 = Color3.fromHex("87a5ff") end
+if Visible then OpenTab.TextColor3 = Color3.fromHex("AFA1FD") end
 OpenTab.AutoButtonColor = false
 OpenTab.Text = Title
 OpenTab.Size = UDim2.new(1, 0, 0, 25)
@@ -132,7 +132,7 @@ end
 for i,v in ipairs(TabsContainer:GetChildren()) do
 v.Visible = false
 end
-OpenTab.TextColor3 = Color3.fromHex("87a5ff")
+OpenTab.TextColor3 = Color3.fromHex("AFA1FD")
 Tab.Visible = true
 end)
 
@@ -146,7 +146,7 @@ Info.BackgroundTransparency = 1
 Info.Text = Title
 Info.TextXAlignment = 0
 Info.Name = "Info"
-Info.TextColor3 = Color3.fromHex("87a5ff")
+Info.TextColor3 = Color3.fromHex("AFA1FD")
 Info.Parent = Tab
 end
 
@@ -173,7 +173,7 @@ ButtonImg.Parent = Button
 Instance.new("UICorner", ButtonImg).CornerRadius = UDim.new(0, 8)
 Button.MouseButton1Click:Connect(function()
 coroutine.wrap(function()
-Button.TextColor3 = Color3.fromHex("87a5ff")
+Button.TextColor3 = Color3.fromHex("AFA1FD")
 task.wait(1)
 Button.TextColor3 = Color3.fromHex("7A7A84")
 end)()
@@ -207,7 +207,7 @@ TogButton.MouseButton1Click:Connect(function()
 On = not On
 if On then
 TogButton.ImageTransparency = 0
-Tog.TextColor3 = Color3.fromHex("87a5ff")
+Tog.TextColor3 = Color3.fromHex("AFA1FD")
 else
 TogButton.ImageTransparency = 1
 Tog.TextColor3 = Color3.fromHex("7A7A84")
