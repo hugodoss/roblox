@@ -28,11 +28,11 @@ local AimTab = Lib:MakeTab("Aim Options", true)
 AimTab:Info("Aim Options")
 
 AimTab:Toggle("Aimbot", function(value)
-    
+    print(value)
 end)
 
 AimTab:Toggle("Aim Fov", function(value)
-    
+    print(value)
 end)
 
 AimTab:Slider("Fov", 0,100,30, function(Value)
