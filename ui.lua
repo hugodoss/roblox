@@ -1,6 +1,8 @@
 local Lib = {}
 function Lib:MakePrototypeLibrary(Title)
 
+local fontmenu = 16
+
 local SG = Instance.new("ScreenGui")
 SG.Name = "AstralicPrototype"
 SG.DisplayOrder = math.huge
@@ -23,7 +25,7 @@ Instance.new("UICorner", Back).CornerRadius = UDim.new(0, 8)
 local X = Instance.new("TextButton")
 X.Name = "X"
 X.BackgroundTransparency = 1
-X.Font = 16
+X.Font = fontmenu
 X.TextColor3 = Color3.fromHex("AFA1FD")
 X.Size = UDim2.new(0, 30, 0, 30)
 X.Text = "X"
@@ -39,7 +41,7 @@ TitleUI.Name = "TitleUI"
 TitleUI.Size = UDim2.new(0, 400, 0, 30)
 TitleUI.Text = Title
 TitleUI.TextColor3 = Color3.fromHex("AFA1FD")
-TitleUI.Font = 16
+TitleUI.Font = fontmenu
 TitleUI.Position = UDim2.new(0, 10, 0, 10)
 TitleUI.TextScaled = true
 TitleUI.BackgroundTransparency = 1
@@ -48,7 +50,7 @@ TitleUI.Parent = Back
 
 local ToggleUI = Instance.new("TextButton")
 ToggleUI.Name = "ToggleUI"
-ToggleUI.Font = 16
+ToggleUI.Font = fontmenu
 ToggleUI.Size = UDim2.new(0, 32, 0, 32)
 ToggleUI.TextScaled = true
 ToggleUI.TextColor3 = Color3.fromHex("AFA1FD")
@@ -102,7 +104,7 @@ OpenTab.Text = Title
 OpenTab.Size = UDim2.new(1, 0, 0, 25)
 OpenTab.TextScaled = true
 OpenTab.BackgroundColor3 = Color3.fromHex("1D1D27")
-OpenTab.Font = 16
+OpenTab.Font = fontmenu
 OpenTab.Parent = TabsOpenContainer
 Instance.new("UICorner", OpenTab).CornerRadius = UDim.new(0, 8)
 
@@ -140,7 +142,7 @@ local TabElements = {}
 function TabElements:Info(Title)
 local Info = Instance.new("TextLabel")
 Info.TextScaled = true
-Info.Font = 16
+Info.Font = fontmenu
 Info.Size = UDim2.new(1, 0, 0, 25)
 Info.BackgroundTransparency = 1
 Info.Text = Title
@@ -157,7 +159,7 @@ Button.Name = "Button"
 Button.TextColor3 = Color3.fromHex("7A7A84")
 Button.Text = Title
 Button.AutoButtonColor = false
-Button.Font = 16
+Button.Font = fontmenu
 Button.Size = UDim2.new(1, 0, 0, 25)
 Button.TextScaled = true
 Button.BackgroundColor3 = Color3.fromHex("1D1D27")
@@ -189,7 +191,7 @@ Tog.BackgroundColor3 = Color3.fromHex("1D1D27")
 Tog.TextXAlignment = 0
 Tog.TextColor3 = Color3.fromHex("7A7A84")
 Tog.Text = Title
-Tog.Font = 16
+Tog.Font = fontmenu
 Tog.TextScaled = true
 Tog.Parent = Tab
 Instance.new("UICorner", Tog).CornerRadius = UDim.new(0, 8)
