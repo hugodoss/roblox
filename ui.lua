@@ -1,7 +1,7 @@
 local Lib = {}
 function Lib:MakePrototypeLibrary(Title)
 
-local fontmenu = 16
+local fontmenu = 26
 
 local SG = Instance.new("ScreenGui")
 SG.Name = "AstralicPrototype"
