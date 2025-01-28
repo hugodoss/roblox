@@ -1,12 +1,14 @@
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ahsrua/AsruaUI/main/sursa.lua"))():MakePrototypeLibrary("DeadLine")
 
 local CuteTab = Lib:MakeTab("Visuals", true)
+
 CuteTab:Info("Visuals")
 
 local ESPBoxEnabled = false
 local ESPNameEnabled = false
 local ESPDistanceEnabled = false
 local CrosshairEnabled = false
+local crosshair = nil
 
 CuteTab:Toggle("ESP Box", function(value)
     ESPBoxEnabled = value
@@ -22,21 +24,32 @@ end)
 
 CuteTab:Toggle("Crosshair", function(value)
     CrosshairEnabled = value
+    if CrosshairEnabled then
+        crosshair = {
+            line1 = Drawing.new("Line"),
+            line2 = Drawing.new("Line")
+        }
+
+        crosshair.line1.Thickness = 2
+        crosshair.line1.Color = Color3.fromRGB(255, 255, 255)
+        crosshair.line1.Visible = true
+
+        crosshair.line2.Thickness = 2
+        crosshair.line2.Color = Color3.fromRGB(255, 255, 255)
+        crosshair.line2.Visible = true
+    elseif crosshair then
+        crosshair.line1:Remove()
+        crosshair.line2:Remove()
+        crosshair = nil
+    end
 end)
 
-local AimTab = Lib:MakeTab("Aim Options", true)
+local AimTab = Lib:MakeTab("Aim Options", false)
+
 AimTab:Info("Aim Options")
 
 AimTab:Toggle("Aimbot", function(value)
     print(value)
-end)
-
-AimTab:Toggle("Aim Fov", function(value)
-    print(value)
-end)
-
-AimTab:Slider("Fov", 0,100,30, function(Value)
-    print(Value)
 end)
 
 local ESP = {}
@@ -123,6 +136,17 @@ local updateConnection = RunService.PreRender:Connect(function()
             drawings.box.Visible = false
             drawings.text.Visible = false
         end
+    end
+
+    if CrosshairEnabled and crosshair then
+        local centerX = camera.ViewportSize.X / 2
+        local centerY = camera.ViewportSize.Y / 2
+
+        crosshair.line1.From = Vector2.new(centerX - 10, centerY)
+        crosshair.line1.To = Vector2.new(centerX + 10, centerY)
+
+        crosshair.line2.From = Vector2.new(centerX, centerY - 10)
+        crosshair.line2.To = Vector2.new(centerX, centerY + 10)
     end
 end)
 
