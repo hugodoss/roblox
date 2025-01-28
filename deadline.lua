@@ -1,8 +1,6 @@
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ahsrua/AsruaUI/main/sursa.lua"))():MakePrototypeLibrary("DeadLine")
 
 local CuteTab = Lib:MakeTab("Visuals", true)
-local AimTab = Lib:MakeTab("Aim Options", true)
-
 CuteTab:Info("Visuals")
 
 local ESPBoxEnabled = false
@@ -24,6 +22,21 @@ end)
 
 CuteTab:Toggle("Crosshair", function(value)
     CrosshairEnabled = value
+end)
+
+local AimTab = Lib:MakeTab("Aim Options", true)
+AimTab:Info("Aim Options")
+
+AimTab:Toggle("Aimbot", function(value)
+    
+end)
+
+AimTab:Toggle("Aim Fov", function(value)
+    
+end)
+
+AimTab:Slider("Fov", 0,100,30, function(Value)
+    print(Value)
 end)
 
 local ESP = {}
