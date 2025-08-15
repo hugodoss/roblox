@@ -296,16 +296,16 @@ local function GetTeamColor(player)
 
     if TeamCheck then
 
-        if localTeam == "Attackers" then
-            if playerTeam == "Defenders" then
+        if localTeam == "Allegiance" then
+            if playerTeam == "Coalition" then
                 return Color3.fromRGB(255, 255, 255)
-            elseif playerTeam == "Attackers" then
+            elseif playerTeam == "Allegiance" then
                 return Color3.fromRGBA(0, 0, 255, 0)
             end
-        elseif localTeam == "Defenders" then
-            if playerTeam == "Attackers" then
+        elseif localTeam == "Coalition" then
+            if playerTeam == "Allegiance" then
                 return Color3.fromRGB(255, 255, 255)
-            elseif playerTeam == "Defenders" then
+            elseif playerTeam == "Coalition" then
                 return Color3.fromRGBA(0, 0, 255, 0)
             end
         end
